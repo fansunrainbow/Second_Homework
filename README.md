@@ -1,16 +1,9 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+第二次随堂作业：电商商品列表⻚与详情⻚开发
+1. 项目需求：实现电商平台的商品列表⻚（支持商品筛选、排序、分⻚）与商品详情⻚（展示商品信息、规格选择、加入购物⻋），要求组件化拆分合理、状态管理清晰、支持响应式
+2. 实战步骤：
+- 第一步：项目初始化（使用Vite/Rspack创建项目，配置UI库、状态管理库（如ReduxToolkit/Zustand）
+- 第二步：组件拆分，将⻚面拆分为通用组件（导航栏、分⻚器、筛选组件）、业务组件（商品卡片、规格选择器、购物⻋弹窗）、⻚面组件（商品列表⻚、商品详情⻚）
+- 第三步：实现组件通信与状态管理，通过Props实现父子组件数据传递，使用状态管理库存储全局数据（商品列表、筛选条件、购物⻋数据）
+- 第四步：开发响应式UI，利用UI库与自定义样式，确保⻚面在电脑、平板、手机端均有良好展示效果
+- 第五步：模拟数据交互（使用Mock.js生成商品数据），实现商品筛选（价格、分类）、排序（价格高低、销量）、分⻚加载、加入购物⻋功能
+- 第六步：代码优化与调试，检查组件复用性、状态管理合理性，解决响应式适配问题与交互bug
