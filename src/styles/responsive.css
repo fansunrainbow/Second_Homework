@@ -1,0 +1,183 @@
+/* 全局响应式样式 */
+
+/* 移动设备优先设计 */
+* {
+  box-sizing: border-box;
+}
+
+/* 断点定义 */
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+}
+
+/* 布局容器 */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: var(--breakpoint-xxl)) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
+/* 通用响应式间距 */
+.responsive-gap {
+  gap: 10px;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .responsive-gap {
+    gap: 15px;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .responsive-gap {
+    gap: 20px;
+  }
+}
+
+/* 响应式字体大小 */
+.responsive-text {
+  font-size: 14px;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .responsive-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .responsive-text {
+    font-size: 18px;
+  }
+}
+
+/* 响应式卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .card-grid {
+    gap: 24px;
+  }
+}
+
+/* 响应式筛选面板 */
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .filter-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .filter-panel > * {
+    width: 100%;
+  }
+}
+
+/* 响应式导航 */
+@media (max-width: var(--breakpoint-sm)) {
+  .ant-menu-horizontal {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* 响应式按钮大小 */
+.responsive-button {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .responsive-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* 响应式图片 */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 响应式表单控件 */
+.form-control-responsive {
+  width: 100%;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .form-control-responsive {
+    width: auto;
+  }
+}
+
+/* 响应式表格（如果需要） */
+.responsive-table {
+  overflow-x: auto;
+}
+
+/* 响应式页脚 */
+.footer-responsive {
+  padding: 20px 15px;
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .footer-responsive {
+    padding: 30px 20px;
+  }
+}
